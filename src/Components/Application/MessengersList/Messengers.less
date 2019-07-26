@@ -1,0 +1,74 @@
+@import './../../../styles/variables';
+
+:local {
+  .messengers {
+  }
+
+  .header {
+    margin: 0 0 15px !important;
+  }
+
+  .hide-button {
+  }
+
+  .help-text {
+    margin-bottom: 18px !important;
+  }
+
+  .list {
+    margin-top: 18px ! important;
+  }
+
+  .item-enter {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  .item-enter.item-enter-active {
+    opacity: 1;
+    max-height: 100000px;
+    transition: opacity .3s ease-in, max-height .3s ease-in;
+  }
+
+  .item-leave {
+    opacity: 1;
+    max-height: 100000px;
+  }
+
+  .item-leave.item-leave-active {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity .3s ease-in, max-height .3s ease-in;
+  }
+}
+
+:global(.light-color-scheme) {
+  :local(.question-icon) {
+    &:after {
+      color: @dark-link-color;
+      border: 1px solid @dark-link-color;
+    }
+
+    &:hover {
+      &:after {
+        color: @dark-link-hover;
+        border: 1px solid @dark-link-hover;
+      }
+    }
+  }
+}
+:global(.dark-color-scheme) {
+  :local(.question-icon) {
+    &:after {
+      color: @light-link-color;
+      border: 1px solid @light-link-color;
+    }
+
+    &:hover {
+      &:after {
+        color: @light-link-hover;
+        border: 1px solid @light-link-hover;
+      }
+    }
+  }
+}

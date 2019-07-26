@@ -1,0 +1,139 @@
+@import './../../styles/normalize.less';
+@import './../../styles/body.less';
+@import './../../styles/variables.less';
+
+// Хук для semibold и light
+:global {
+  .thin-font {
+    font-family: 'Roboto Thin', 'Arial Narrow', Arial, sans-serif;
+  }
+  .semibold-font {
+    font-family: 'Roboto Semibold', 'Arial Narrow', Arial, sans-serif;
+  }
+  .light-font {
+    font-family: 'Roboto Light', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+// Хук для определения типа приложения
+:local {
+  .detect-device {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    position: fixed;
+
+    // Телефон
+    @media only screen
+    and (max-width: 769px)  {
+      width: 1px;
+    }
+
+    // Планшет
+    @media only screen
+    and (min-width: 770px)
+    and (max-width: 1000px)  {
+      width: 2px;
+    }
+
+    // Desktop
+    @media only screen
+    and (min-width: 1001px) {
+      width: 3px;
+    }
+  }
+}
+
+:local {
+  .application {
+    font-size: 1em;
+    font-weight: 300;
+    color: #333;
+    user-select: none;
+    cursor: default;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .normalize();
+
+    h1 {
+      font-size: 35px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      outline: none;
+      transition: color .1s ease 0s;
+      cursor: pointer;
+    }
+
+    svg {
+      > g {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+:global {
+  .dark-color-scheme {
+    a {
+      color: @light-link-color;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: @light-link-hover;
+      }
+    }
+
+    .svg-for-stroke {
+      stroke: @light-link-color;
+    }
+
+    .svg-for-fill {
+      fill: @light-link-color;
+    }
+  }
+  .light-color-scheme {
+    a {
+      color: @dark-link-color;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: @dark-link-hover;
+      }
+    }
+
+    .svg-for-stroke {
+      stroke: @dark-link-color;
+    }
+
+    .svg-for-fill {
+      fill: @dark-link-color;
+    }
+  }
+}

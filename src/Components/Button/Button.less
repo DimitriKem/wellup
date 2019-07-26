@@ -1,0 +1,59 @@
+
+@import './../../styles/variables.less';
+
+:local {
+  .button {
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    padding: 3px 10px;
+    outline: none;
+
+    &:focus, &:active, &:hover {
+      background-color: rgba(255, 255, 255, .6);
+    }
+  }
+
+  .blue-button {
+    border: 1px solid #0470A1;
+    background: transparent;
+    color: #0470A1;
+    font-weight: 300 !important;
+    padding: 7px 10px;
+    outline: none;
+
+    &:focus, &:active, &:hover {
+      background-color: rgba(71, 137, 255, .1);
+    }
+  }
+
+  .button-with-radius {
+    border: 1px solid;
+    border-radius: 14px;
+    background: transparent;
+    font-weight: 400 !important;
+    font-size: 13px;
+    align-items: center;
+    outline: none;
+    height: 24px;
+    line-height: 24px;
+    width: 90px;
+  }
+}
+
+:global {
+  .dark-color-scheme {
+    :local(.button-with-radius) {
+      border-color: @light-link-color;
+      color: @light-link-color;
+    }
+  }
+  .light-color-scheme {
+    :local(.button-with-radius) {
+      border-color: @dark-link-color;
+      color: @dark-link-color;
+    }
+  }
+}

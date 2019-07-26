@@ -1,0 +1,41 @@
+:local {  
+  .messengers {
+      padding: 35px 15px;
+      overflow-x: hidden;
+  }
+
+  .header {
+      font-size: 30px;
+      font-weight: 300;
+  }
+
+  .helpText, .hint {
+      font-size: 15px !important;
+      line-height: 23px !important;
+  }
+
+  .list {
+      margin-top: 25px !important;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    g {
+      stroke: #333;
+      fill: #333;
+      stroke-width: 0.75;
+    }
+
+    &:hover {
+      g {
+        stroke: lighten(#333, 10%);
+        fill: lighten(#333, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+:local {
+  .layer {
+    width: auto;
+    font-size: 16px;
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .blured {
+    // blur - сильно влияет на производительность, рекомендуется убрать
+    //filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+    //filter: blur(10px);
+    // blur - сильно влияет на производительность, рекомендуется убрать
+    opacity: 0.1;
+  }
+
+  .swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    transition: height 400ms;
+    min-height: 100%;
+  }
+
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative;
+    transition-property: transform;
+  }
+}

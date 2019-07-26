@@ -1,0 +1,81 @@
+
+
+:local {
+  .messages {
+    position: fixed;
+    font-size: 15px;
+    font-weight: 300;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  .messages-hidden {
+    .messages;
+    opacity: 0;
+  }
+
+  .message {
+    pointer-events: all;
+    min-height: 40px;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  .message-success {
+    .message;
+    background-color: #6CCD84;
+  }
+
+  .message-danger {
+    .message;
+    background-color: #FFBE52;
+  }
+
+  .message-error {
+    .message;
+    background-color: #ff3200;
+  }
+
+  .layer {
+    min-height: 40px;
+    padding: 6px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    @media only screen
+    and (min-width: 1001px)  {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    @media only screen
+    and (min-width: 770px)
+    and (max-width: 1000px)  {
+      width: 660px;
+      margin: 0 auto;
+    }
+
+    @media only screen
+    and (max-width: 769px)  {
+      width: auto;
+      padding: 6px 20px;
+    }
+  }
+
+  .content {
+    flex: 1 0 auto;
+    width: 0;
+  }
+
+  .buttons {
+    > button {
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 10px;
+      }
+    }
+  }
+}

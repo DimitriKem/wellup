@@ -1,0 +1,71 @@
+:local {
+    .icon {
+        height: 24px;
+        background: #fff;
+        color: #288dd8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        font-size: 13px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .deactive {
+        width: 24px;
+        transition: width 0.2s ease-in-out;
+
+        &:before {
+            content: '';
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .fill {
+            fill: #c0c0c0;
+        }
+
+        &:hover {
+            width: 90px;
+
+            &:before {
+                content: 'Включить';
+                opacity: 1;
+            }
+
+            .svg {
+                display: none;
+            }
+        }
+    }
+
+    .active {
+        width: 90px;
+
+        &:before {
+            content: 'Активен';
+            margin-right: 3px;
+            margin-left: 5px;
+        }
+
+        .fill {
+            fill: #288dd8;
+        }
+
+        &:hover {
+            background: #e51e1e;
+            color: #fff;
+
+            &:before {
+                content: 'Отключить';
+            }
+
+            .svg {
+                display: none;
+            }
+        }
+    }
+}

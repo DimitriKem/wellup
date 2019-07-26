@@ -1,0 +1,76 @@
+@background: #fff;
+@arrow-width: 8px;
+
+:local {
+  .pop-up-container {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: @background;
+    padding: 30px 20px;
+    //box-shadow: 0 5px 30px -5px rgba(0,0,0,.5);
+    box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+
+    font-size: 15px;
+    font-weight: 300;
+    color: #0e1516;
+    max-width: 560px;
+    min-width: 250px;
+    max-height: 500px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+  .pop-up-container-unvisible {
+    .pop-up-container;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .arrow {
+    position: absolute;
+    border: @arrow-width solid transparent;
+    background: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    left: 0;
+    bottom: -@arrow-width;
+    border-top-color: @background !important;
+  }
+
+  .arrow-top {
+    .arrow;
+    bottom: -2*@arrow-width;
+    border-top-color: transparent !important;
+    border-bottom-color: @background !important;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    g {
+      stroke: #333;
+      stroke-width: 0.75;
+    }
+
+    &:hover {
+      g {
+        stroke: lighten(#333, 10%);
+      }
+    }
+  }
+
+  .popUp {
+    display: flex;
+  }
+}

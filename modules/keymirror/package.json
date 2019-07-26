@@ -1,0 +1,6 @@
+{
+  "name": "@igor/keymirror",
+  "description": "keymirror",
+  "version": "1.0.1",
+  "main": "keyMirror.js"
+}

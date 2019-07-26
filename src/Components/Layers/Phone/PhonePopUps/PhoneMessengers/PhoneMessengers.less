@@ -1,0 +1,61 @@
+:local {
+  .messengers {
+    position: relative;
+  }
+
+  .header{
+    margin: 0 0 15px !important;
+  }
+
+  .text-for-disabled {
+    margin: 15px 0 !important;
+    line-height: 20px;
+  }
+
+  .items-disabled {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .disabled {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0170A1;
+    margin-right: 10px;
+  }
+
+  .hint {
+    display: flex;
+  }
+
+  .hint-icon {
+    margin-right: 10px;
+  }
+
+  .hint-text {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .question-icon {
+    cursor: pointer;
+    &:after {
+      color: #089ed5 !important;
+      border: 1px solid #089ed5 !important;
+    }
+
+    &:hover {
+      &:after {
+        color: lighten(#089ed5, 5%) !important;
+        border: 1px solid lighten(#089ed5, 10%) !important;
+      }
+    }
+  }
+
+  .ok {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
