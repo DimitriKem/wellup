@@ -1,4 +1,4 @@
-[DEMO https://igor24.gitlab.io/wellup-timeline/](https://igor24.gitlab.io/wellup-timeline/)
+
 
 # Веб-интерфейс wellup.me расписания
 
