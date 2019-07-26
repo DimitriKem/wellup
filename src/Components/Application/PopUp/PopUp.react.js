@@ -11,6 +11,7 @@ const CloseIcon = require('./../../Icons/DeleteIcon.react');
 const TIME_COUNT = 50;  //мс, интервал пересчета позиции
 const ARROW_HEIGHT = 8;
 
+
 /**
  * @class PopUp
  * @extends React.Component
