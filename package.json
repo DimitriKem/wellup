@@ -17,7 +17,7 @@
     "@igor/thunk": "file:modules/thunk",
     "autoprefixer": "6.3.7",
     "sortablejs": "1.8.3",
-    "axios": "0.12.0",
+    "axios": "0.21.1",
     "axios-mock-adapter": "^1.5.0",
     "babel-core": "6.10.4",
     "babel-eslint": "6.1.2",
